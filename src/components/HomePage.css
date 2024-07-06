@@ -1,0 +1,66 @@
+.home-page .title-container {
+  background-image: url('/public/assets/shanghaibackg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+.title-container2{
+  background-image: url('/public/assets/comment1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+
+}
+.title-container3{
+  background-image: url('/public/assets/restaurant.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+
+}
+
+.image-container {
+  margin-bottom: 2rem;
+}
+
+.video-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.footer{
+  background-color: black;
+  color: #fff; 
+  padding: 20px 0; 
+  text-align: center; 
+}
+.height{
+  height: 500px;
+}
+.back{
+  background-color: rgb(148, 8, 8);
+  color: #e9ecef;
+}

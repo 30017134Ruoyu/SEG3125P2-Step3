@@ -1,0 +1,33 @@
+.food-recommendations-page .title-container {
+  background-image: url('/public/assets/restaurant.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.footer{
+  background-color: black;
+  color: #fff; 
+  padding: 20px 0; 
+  text-align: center; 
+}
+.search-bar{
+  background-color: rgb(148, 8, 8) ;
+  color: #fff;
+  width: 100%;
+}
+.card-text{
+  text-align: left;
+}

@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #000; 
+  }
+  
+  .navbar-brand, .nav-link, .dropdown-item {
+    color: #fff !important; 
+  }
+  
+  .navbar-brand:hover, .nav-link:hover, .dropdown-item:hover {
+    color: #ccc !important; 
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff; 
+  }
+  
+  .navbar .dropdown-menu {
+    background-color: #000; 
+  }
+  
+  .navbar .dropdown-item {
+    color: #fff !important; 
+  }
+  
+  .navbar .dropdown-item:hover {
+    background-color: #333; 
+  }
+ 

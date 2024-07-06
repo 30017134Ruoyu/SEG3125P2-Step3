@@ -1,0 +1,81 @@
+.communication-page .title-container {
+    background-image: url('/public/assets/comm1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 300px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .communication-page .card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .communication-page .card-title {
+    font-weight: bold;
+  }
+  
+  .communication-page .text-success {
+    font-size: 1.2em;
+  }
+  
+  .communication-page .overflow-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .communication-page .overflow-auto::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .communication-page .card-subtitle {
+    font-size: 0.9em;
+  }
+  
+  .communication-page .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .communication-page .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .communication-page .text-muted {
+    font-size: 0.8em;
+  }
+  
+  .communication-page .replies .reply-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .communication-page .replies .reply-time {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  
+  .communication-page .replies {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  
+  .communication-page .replies .reply-text {
+    width: 75%;
+  }
+  
+  .communication-page .replies .reply-time {
+    width: 25%;
+    text-align: right;
+  }
+  .footer{
+    background-color: black;
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center; 
+  }

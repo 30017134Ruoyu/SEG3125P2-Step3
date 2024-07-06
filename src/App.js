@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import PlanningTripPage from './components/PlanningTripPage';
+import PracticalInfoPage from './components/PracticalInfoPage';
+import TouristAttractionsPage from './components/TouristAttractionsPage';
+import FoodRecommendationsPage from './components/FoodRecommendationsPage';
+import CreateTravelLogPage from './components/CreateTravelLogPage';
+import CommunicationPage from './components/CommunicationPage';
+import ScrollToTop from './components/ScrollToTop';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/planning-trip" element={<PlanningTripPage />} />
+        <Route path="/practical-info" element={<PracticalInfoPage />} />
+        <Route path="/tourist-attractions" element={<TouristAttractionsPage />} />
+        <Route path="/food-recommendations" element={<FoodRecommendationsPage />} />
+        <Route path="/create-travel-log" element={<CreateTravelLogPage />} />
+        <Route path="/communication" element={<CommunicationPage />} />
+      </Routes>
+    </Router>
   );
 }
 

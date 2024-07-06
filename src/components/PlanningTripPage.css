@@ -1,0 +1,27 @@
+.planning-trip-page .title-container {
+  background-image: url('/public/assets/plan.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-placeholder {
+  height: 360px;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.footer{
+  background-color: black;
+  color: #fff; 
+  padding: 20px 0; 
+  text-align: center; 
+}
+.back{
+  background-color: rgb(148, 8, 8);
+  color: #e9ecef;
+}
