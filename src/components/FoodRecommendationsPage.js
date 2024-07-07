@@ -15,12 +15,12 @@ const FoodRecommendationsPage = () => {
   const restaurants = [
     { id: 1, name: 'Nansho-Mantouten', location: 'No. 70, Yuyuan Old Street, Huangpu District', average: 50, rating: 4, category: 'Dessert', description: 'Nansho-Mantouten is located at No. 85, Yuyuan New Road, Huangpu District, Shanghai. It is a restaurant famous for its traditional Chinese dim sum. The signature dish here is Xiao Long Bao, which is loved by diners for its thin skin, rich fillings and delicious soup.' },
     { id: 2, name: 'GuangMing Restaurant', location: 'No. 588 Huaihai Middle Road', average: 60, rating: 5, category: 'Chinese', description: 'Guangming Restaurant is located in the center of Shanghai. It is a local restaurant with a long history and is well-known locally for its classic Shanghai dishes and unique flavors. Since its establishment, Guangming Village has insisted on using fresh ingredients and traditional cooking methods to provide diners with an authentic taste of Shanghai.' },
-    { id: 3, name: 'GoodFellas', location: 'The Bund, No. 7 Yan\'an East Road, Huangpu District', average: 240, rating: 5, category: 'Italian', description: 'Goodfellas Italian Restaurant is located on the Bund, No. 7 Yan'+'an East Road, Huangpu District, Shanghai. With its exquisite dishes and elegant dining environment, it enjoys a high reputation in Shanghai'+'s catering industry. The restaurant offers a variety of classic Italian dishes, including handmade pizza, pasta, seafood dishes and a variety of unique appetizers and desserts.' },
-    { id: 4, name: 'Yone', location: '199 Nanjing East Road, 27F, The Shanghai Edition', average: 170, rating: 4, category: 'Japanese', description: 'YONE is a high-end Japanese restaurant, renowned in Shanghai for its exquisite dishes and luxurious dining environment. YONE'+'s menu combines traditional and modern Japanese cuisine, including a variety of fresh sashimi, sushi, tempura and grilled food. The restaurant insists on using high-quality ingredients, and each dish is carefully prepared to ensure a high level of taste and deliciousness.' },
-    { id: 5, name: 'Da Hu Chun', location: 'No. 302, Wulumuqi North Road, Jing\'an District', average: 25, rating: 4, category: 'Dessert', description: 'Da Hu Chun is a traditional Chinese restaurant that is loved by local residents and tourists. It is famous for its authentic Shanghai snacks and dim sum. Since its establishment, Da Hu Chun has always insisted on using fresh ingredients and traditional cooking methods to provide diners with the most authentic Shanghai taste.' },
-    { id: 6, name: 'Trusu', location: '1218 Middle Yan\'an Road, West Nanjing Road Level 2', average: 165, rating: 4, category: 'Japanese', description: 'Tsuru is a high-end restaurant known for its exquisite Japanese cuisine and sushi. The restaurant'+'"s name "Tsuru" means "crane", which symbolizes longevity and good fortune, just like the food served in the restaurant, which is both healthy and delicious.' },
+    { id: 3, name: 'GoodFellas', location: "The Bund, No. 7 Yan'an East Road, Huangpu District", average: 240, rating: 5, category: 'Italian', description: 'Goodfellas Italian Restaurant is located on the Bund, No. 7 Yan\'an East Road, Huangpu District, Shanghai. With its exquisite dishes and elegant dining environment, it enjoys a high reputation in Shanghai\'s catering industry. The restaurant offers a variety of classic Italian dishes, including handmade pizza, pasta, seafood dishes and a variety of unique appetizers and desserts.' },
+    { id: 4, name: 'Yone', location: '199 Nanjing East Road, 27F, The Shanghai Edition', average: 170, rating: 4, category: 'Japanese', description: 'YONE is a high-end Japanese restaurant, renowned in Shanghai for its exquisite dishes and luxurious dining environment. YONE\'s menu combines traditional and modern Japanese cuisine, including a variety of fresh sashimi, sushi, tempura and grilled food. The restaurant insists on using high-quality ingredients, and each dish is carefully prepared to ensure a high level of taste and deliciousness.' },
+    { id: 5, name: 'Da Hu Chun', location: "No. 302, Wulumuqi North Road, Jing'an District", average: 25, rating: 4, category: 'Dessert', description: 'Da Hu Chun is a traditional Chinese restaurant that is loved by local residents and tourists. It is famous for its authentic Shanghai snacks and dim sum. Since its establishment, Da Hu Chun has always insisted on using fresh ingredients and traditional cooking methods to provide diners with the most authentic Shanghai taste.' },
+    { id: 6, name: 'Trusu', location: "1218 Middle Yan'an Road, West Nanjing Road Level 2", average: 165, rating: 4, category: 'Japanese', description: 'Tsuru is a high-end restaurant known for its exquisite Japanese cuisine and sushi. The restaurant\'s name "Tsuru" means "crane", which symbolizes longevity and good fortune, just like the food served in the restaurant, which is both healthy and delicious.' },
     { id: 7, name: 'Cantina Agave', location: 'No. 291, Fumin Road, Xuhui District', average: 75, rating: 5, category: 'Mexican', description: 'A contemporary Cali-Tex Mexican restaurant, Cantina caters to both the locals and expats alike, while in a unique location to serve the business professionals as well as the families in the neighborhood.' },
-    { id: 8, name: 'Bella Napoli', location: 'Building 4, Lane 946, Changle Road, Jing\'an District, Location 8', average: 145, rating: 4, category: 'Italian', description: 'Glass roof, red brick walls, blackboards with our daily specials. Black and white photos on the walls, sunlight through the skylight, giving our restaurant a charming glow. We offer you the simplest, purest and highest quality food, 80% of the ingredients are imported from Italy, absolutely original, and all the food is cooked with filtered water, so you can eat it with absolute peace of mind!' },
+    { id: 8, name: 'Bella Napoli', location: "Building 4, Lane 946, Changle Road, Jing'an District, Location 8", average: 145, rating: 4, category: 'Italian', description: 'Glass roof, red brick walls, blackboards with our daily specials. Black and white photos on the walls, sunlight through the skylight, giving our restaurant a charming glow. We offer you the simplest, purest and highest quality food, 80% of the ingredients are imported from Italy, absolutely original, and all the food is cooked with filtered water, so you can eat it with absolute peace of mind!' },
   ];
 
   const categories = ['Chinese', 'Italian', 'Mexican', 'Dessert', 'Japanese'];
@@ -109,14 +109,9 @@ const FoodRecommendationsPage = () => {
           <h1 className="title">Restaurants</h1>
         </div>
         
-         
-          <h2 className='search-bar mt-5'>Triditional Food</h2>
-          
-          
+        <h2 className='search-bar mt-5'>Triditional Food</h2>
 
-        
         <Carousel className="my-4">
-          
           {foodDescriptions.map((item, index) => (
             <Carousel.Item key={index}>
               <img 
@@ -190,7 +185,6 @@ const FoodRecommendationsPage = () => {
                         <Card.Body>
                           <Card.Text>
                             <p >{restaurant.description}</p>
-                            
                           </Card.Text>
                           <Button variant="primary" href={getDianpingLink()} target="_blank" className='mt-5'>Book a seat</Button>
                         </Card.Body>
