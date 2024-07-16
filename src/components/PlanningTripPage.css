@@ -1,3 +1,13 @@
+.planning-trip-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.planning-trip-page .content {
+  flex: 1 0 auto;
+}
+
 .planning-trip-page .title-container {
   background-image: url('/public/assets/plan.jpg');
   background-size: cover;
@@ -7,7 +17,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.video-placeholder {
+.planning-trip-page .video-placeholder {
   height: 360px;
   background-color: #e9ecef;
   display: flex;
@@ -15,13 +25,30 @@
   align-items: center;
   font-size: 1.5rem;
 }
-.footer{
+
+.planning-trip-page .footer {
+  flex-shrink: 0;
   background-color: black;
   color: #fff; 
   padding: 20px 0; 
   text-align: center; 
 }
-.back{
+
+.planning-trip-page .back {
   background-color: rgb(148, 8, 8);
   color: #e9ecef;
+}
+
+.planning-trip-page .card-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.planning-trip-page .card-body{
+
+  max-height: fit-content;
+}
+
+.planning-trip-page .intro{
+  text-align: left;
 }

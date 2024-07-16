@@ -5,6 +5,7 @@
   padding: 300px 0;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .carousel-item img {
@@ -22,12 +23,19 @@
   color: #fff; 
   padding: 20px 0; 
   text-align: center; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .search-bar{
   background-color: rgb(148, 8, 8) ;
   color: #fff;
   width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .card-text{
   text-align: left;
+}
+.card-body{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   object-fit:cover;
+   max-height: 500px;
 }

@@ -7,17 +7,21 @@ import TouristAttractionsPage from './components/TouristAttractionsPage';
 import FoodRecommendationsPage from './components/FoodRecommendationsPage';
 import CreateTravelLogPage from './components/CreateTravelLogPage';
 import CommunicationPage from './components/CommunicationPage';
+import Faq from './components/Faq';
 import ScrollToTop from './components/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { AuthProvider } from './components/AuthContext';
 
 
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
       <ScrollToTop/>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/planning-trip" element={<PlanningTripPage />} />
         <Route path="/practical-info" element={<PracticalInfoPage />} />
         <Route path="/tourist-attractions" element={<TouristAttractionsPage />} />
@@ -26,6 +30,9 @@ function App() {
         <Route path="/communication" element={<CommunicationPage />} />
       </Routes>
     </Router>
+
+    </AuthProvider>
+    
   );
 }
 

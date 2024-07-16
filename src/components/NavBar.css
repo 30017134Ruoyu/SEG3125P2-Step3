@@ -4,6 +4,7 @@
   
   .navbar-brand, .nav-link, .dropdown-item {
     color: #fff !important; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .navbar-brand:hover, .nav-link:hover, .dropdown-item:hover {

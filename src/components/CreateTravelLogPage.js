@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col, Image } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 import './CreateTravelLogPage.css';
 import NavBar from './NavBar';
 
 const CreateTravelLogPage = () => {
+  const { t } = useTranslation();
   const [rating, setRating] = useState(0);
   const [visitTime, setVisitTime] = useState('');
   const [companions, setCompanions] = useState('');
   const [review, setReview] = useState('');
-  const [title, setTitle] = useState('');
   const [uploadedImages, setUploadedImages] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Travel log created');
+    alert(t('create_travel_story'));
   };
 
   const handleImageUpload = (e) => {
@@ -21,99 +22,92 @@ const CreateTravelLogPage = () => {
     setUploadedImages(files);
   };
 
+  const handleRating = (value) => {
+    setRating(value);
+  };
+  const handleReset = () => {
+    setRating([]);
+    setVisitTime([]);
+    setCompanions([]);
+    setReview('');
+    
+    setUploadedImages([]);
+  };
+
   return (
     <div className="create-travel-log-page">
       <NavBar/>
-           
       <Container className="text-center mt-1">
         <div className="title-container">
-          <h1 className="title">Create Your Travel Story</h1>
+          <h1 className="title">{t('create_travel_story')}</h1>
         </div>
       </Container>
-
-     
-
       <Container className="mt-5">
         <Container className='back mt-5'>
-          <h1 className="text-center">Share Your Experience</h1>
+          <h1 className="text-center">{t('share_experience')}</h1>
         </Container>
-        
-        
         <Row className="mt-4">
           <Col md={4}>
             <Image src={`${process.env.PUBLIC_URL}/assets/share1.jpg`} fluid />
-            <h2>Oriental Pearl Tower</h2>
-            <p>1 Century Avenue, Pudong New Area</p>
-            <p>Shanghai, China</p>
+            <h2>{t('oriental_pearl_tower')}</h2>
+            <p>{t('address_1')}</p>
+            <p>{t('address_2')}</p>
           </Col>
           <Col md={8}>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
-                <Form.Label>How would you rate this experience?</Form.Label>
+                <Form.Label>{t('rate_experience')}</Form.Label>
                 <div>
                   {[1, 2, 3, 4, 5].map((star) => (
                     <span
                       key={star}
-                      onClick={() => setRating(star)}
+                      onClick={() => handleRating(star)}
                       className={`star ${star <= rating ? 'filled' : ''}`}
+                      style={{ cursor: 'pointer', fontSize: '24px', color: star <= rating ? 'gold' : 'gray' }}
                     >
-                      ○
+                      ★
                     </span>
                   ))}
                 </div>
               </Form.Group>
-
               <Form.Group className="mb-3">
-                <Form.Label>When did you visit?</Form.Label>
+                <Form.Label>{t('visit_time')}</Form.Label>
                 <Form.Control as="select" value={visitTime} onChange={(e) => setVisitTime(e.target.value)}>
-                  <option value="">Select a time</option>
-                  <option value="morning">Morning</option>
-                  <option value="afternoon">Afternoon</option>
-                  <option value="evening">Evening</option>
+                  <option value="">{t('select_time')}</option>
+                  <option value="morning">{t('morning')}</option>
+                  <option value="afternoon">{t('afternoon')}</option>
+                  <option value="evening">{t('evening')}</option>
                 </Form.Control>
               </Form.Group>
-
               <Form.Group className="mb-3">
-                <Form.Label>Who did you go with?</Form.Label>
+                <Form.Label>{t('companions')}</Form.Label>
                 <div>
-                  {['Business', 'Couple', 'Family', 'Friends', 'Solo'].map((option) => (
+                  {['business', 'couple', 'family', 'friends', 'solo'].map((option) => (
                     <Button
                       key={option}
-                      variant={companions === option ? 'primary' : 'outline-primary'}
-                      onClick={() => setCompanions(option)}
+                      variant={companions === t(option) ? 'primary' : 'outline-primary'}
+                      onClick={() => setCompanions(t(option))}
                       className="me-2 mb-2"
                     >
-                      {option}
+                      {t(option)}
                     </Button>
                   ))}
                 </div>
               </Form.Group>
-
               <Form.Group className="mb-3">
-                <Form.Label>Write your review</Form.Label>
+                <Form.Label>{t('write_review')}</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={5}
                   value={review}
                   onChange={(e) => setReview(e.target.value)}
-                  placeholder="The place was beautiful. We took a lot of photos!..."
+                  placeholder={t('review_placeholder')}
                 />
-                <div className="text-muted">{review.length} characters (at least 50 characters)</div>
+                <div className="text-muted">{t('characters_count', { count: review.length })}</div>
               </Form.Group>
-
+             
               <Form.Group className="mb-3">
-                <Form.Label>Title</Form.Label>
-                <Form.Control
-                  type="text"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Introduce your experience"
-                />
-                <div className="text-muted">{title.length} characters (up to 120 characters)</div>
-              </Form.Group>
-
-              <Form.Group className="mb-3">
-                <Form.Label>Add some photos</Form.Label>
+                <Form.Label>{t('add_photos')}</Form.Label>
                 <Form.Control type="file" multiple onChange={handleImageUpload} />
                 <div className="mt-2">
                   {uploadedImages.map((image, index) => (
@@ -121,31 +115,28 @@ const CreateTravelLogPage = () => {
                   ))}
                 </div>
               </Form.Group>
-
               <Form.Group className="mb-3">
-                
                 <Form.Check 
-                  type="radio"
-                  label = "Visible to others"
+                  type="checkbox"
+                  label={t('visible_to_others')}
                 />
               </Form.Group>
-
               <Form.Group className="mb-3">
-                
                 <Form.Check 
-                  
-                  type="radio"
-                  label="Share with the community members."
+                  type="checkbox"
+                  label={t('share_with_community')}
                 />
               </Form.Group>
-
-              <Button variant="outline-primary" type="submit" >Share Review</Button>
+              <Button variant="outline-primary" type="submit">{t('share_review')}</Button> 
+              
+              <Button variant="secondary" onClick={handleReset} className="reset">{t('reset')}</Button>
+              
             </Form>
+            
           </Col>
         </Row>
       </Container>
-
-      <footer className="footer text-center py-3 mt-5">© 2024 View Shanghai. All rights reserved.</footer>
+      <footer className="footer text-center py-3 mt-5">{t('footer_text')}</footer>
     </div>
   );
 };

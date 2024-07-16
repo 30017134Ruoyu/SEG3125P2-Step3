@@ -1,0 +1,117 @@
+/* TouristAttractionsPage.module.css */
+.touristAttractionsPage {
+  .titleContainer {
+    background-image: url('/public/assets/tourist2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 300px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .boldText {
+    font-weight: bold;
+    background-color: rgb(148, 8, 8);
+    color: #e9ecef;
+    padding: 10px;
+  }
+  
+  .align {
+    text-align: left;
+    font-size: large;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+  }
+  
+  .comment {
+    color: rgb(245, 235, 92);
+  }
+  
+  .attractionImagesFlexContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .attractionImageFlexItem {
+    flex: 1;
+    max-width: calc(50% - 7.5px);
+    height: 350px;
+    overflow: hidden;
+  }
+  
+  .attractionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cardBody {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .maplogo {
+    cursor: pointer;
+  }
+  
+  .background {
+    background-color: rgb(148, 8, 8);
+    color: #e9ecef;
+  }
+  
+  .title{
+    text-align: center;
+    
+  }
+  .otherAttractionCard {
+    height: 100%;
+  }
+  
+  .otherAttractionImageContainer {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .otherAttractionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .otherAttractionBody {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    display: flex;
+    text-align: center;
+    
+  }
+  
+  .otherAttractionTicket {
+    margin: 10px 0;
+  }
+  
+  .otherAttractionButton {
+    align-self: center;
+  }
+  
+}
+

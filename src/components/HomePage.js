@@ -2,9 +2,12 @@ import React from 'react';
 import { Container, Carousel, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
+import { useTranslation } from 'react-i18next';
 import './HomePage.css';
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='home-page'>
       <NavBar />
@@ -12,24 +15,24 @@ const HomePage = () => {
         <Carousel interval={3000}>
           <Carousel.Item>
             <div className="title-container">
-              <h1 className="title">Welcome to Shanghai</h1>
+              <h1 className="title">{t('welcome_title')}</h1>
             </div>
             <Carousel.Caption>
-              <h3>Modern city</h3>
-              <p>Shanghai Skyline at dusk</p>
+              <h3>{t('modern_city')}</h3>
+              <p>{t('shanghai_skyline')}</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <Link to="/tourist-attractions">
               <div className="title-container2">
-                <h1 className="title">Find amazing attractions</h1>
+                <h1 className="title">{t('find_attractions')}</h1>
               </div>
             </Link>
           </Carousel.Item>
           <Carousel.Item>
             <Link to="/food-recommendations">
               <div className="title-container3">
-                <h1 className="title">Find amazing restaurants</h1>
+                <h1 className="title">{t('find_restaurants')}</h1>
               </div>
             </Link>
           </Carousel.Item>
@@ -37,10 +40,10 @@ const HomePage = () => {
       </Container>
       <Container>
         <section className="content-section">
-          <h2 className='back'>Overview</h2>
-          <p><strong>With a population of more than 24 million (2018), Shanghai is the China's most populous metropolis, and one of the four provincial-level municipalities under the direct control of Central Government, which proclaims its unique importance in politics and economy.</strong></p>
-          <p>Shanghai was first set up as a county by then government in 1292 (Yuan Dynasty). After 700+ years of development, it has grown into the most prosperous, dynamic city in this country. In history of Shanghai, two periods have to be mentioned: in 1910's-1930's Shanghai entered its first heyday. It was the richest city in East Asia, nicknamed as "Oriental Paris", when European style buildings were widely constructed at city downtown, which can still be seen on the Bund and the former French Concession currently. From 1990's to present, Shanghai got revived, and its economy was put back on the right track because of the lift of market restriction and opening up to the outside world. An unprecedented construction boom during the period made Pudong area a pride of Chinese people.</p>
-          <p>Maybe Shanghai can't match the epic history of Beijing or Xi'an's grander sights, but it is the hotspot of modern China, even the birthplace of China's Communist Party. There is a lot to see, experience and taste here, a place in China that can never be missed out.</p>
+          <h2 className='back'>{t('overview')}</h2>
+          <p><strong>{t('overview_content1')}</strong></p>
+          <p>{t('overview_content2')}</p>
+          <p>{t('overview_content3')}</p>
         </section>
         <div className="video-container">
           <video width="100%" controls>
@@ -58,10 +61,10 @@ const HomePage = () => {
             />
           </Col>
           <Col md={6} className="p-4 d-flex flex-column justify-content-center bg-dark text-white">
-            <h3>Explore Tourist Attraction</h3>
-            <p>Discover the famous tourist attractions in Shanghai, having fun!</p>
+            <h3>{t('explore_tourist_attractions')}</h3>
+            <p>{t('explore_tourist_attractions_desc')}</p>
             <Link to="/tourist-attractions" className="btn btn-outline-light align-self-start mt-3">
-              Learn More
+              {t('learn_more')}
             </Link>
           </Col>
         </Row>
@@ -69,10 +72,10 @@ const HomePage = () => {
       <Container>
         <Row className="mt-4 height">
           <Col md={6} className="p-4 d-flex flex-column justify-content-center bg-dark text-white">
-            <h3>Explore Shanghai Cuisine</h3>
-            <p>Discover the rich flavors and unique dishes that make Shanghai cuisine so special. From xiaolongbao to shengjianbao, experience the taste of authentic Shanghai.</p>
+            <h3>{t('explore_shanghai_cuisine')}</h3>
+            <p>{t('explore_shanghai_cuisine_desc')}</p>
             <Link to="/food-recommendations" className="btn btn-outline-light align-self-start mt-3">
-              Learn More
+              {t('learn_more')}
             </Link>
           </Col>
           <Col md={6} className="p-0">
@@ -94,10 +97,10 @@ const HomePage = () => {
             />
           </Col>
           <Col md={6} className="p-4 d-flex flex-column justify-content-center bg-dark text-white">
-            <h3>Create your travel plan</h3>
-            <p>Create your own travel plan, feel flexible.</p>
+            <h3>{t('create_travel_plan')}</h3>
+            <p>{t('create_travel_plan_desc')}</p>
             <Link to="/planning-trip" className="btn btn-outline-light align-self-start mt-3">
-              Learn More
+              {t('learn_more')}
             </Link>
           </Col>
         </Row>
@@ -105,10 +108,10 @@ const HomePage = () => {
       <Container>
         <Row className="mt-4">
           <Col md={6} className="p-4 d-flex flex-column justify-content-center bg-dark text-white">
-            <h3>Share your mood with friends</h3>
-            <p>Record your experience when traveling in Shanghai and share your story in the community.</p>
+            <h3>{t('share_mood')}</h3>
+            <p>{t('share_mood_desc')}</p>
             <Link to="/communication" className="btn btn-outline-light align-self-start mt-3">
-              Learn More
+              {t('learn_more')}
             </Link>
           </Col>
           <Col md={6} className="p-0">
@@ -120,7 +123,8 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
-      <footer className="footer text-center py-3">© 2024 View Shanghai. All rights reserved.</footer>
+      <br></br>
+      <footer className="footer text-center py-3">{t('footer_text')}</footer>
     </div>
   );
 };
